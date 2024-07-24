@@ -8,12 +8,12 @@ import Header from '@/components/layout/header'
 
 import tw from 'twrnc';
 
-export default function HomeScreen() {
+export default function SettingsScreen() {
   return (
     <SafeAreaView style={tw`flex flex-1 bg-white`}>
-      <Header title="Home" />
+      <Header title="Settings" />
       <View style={tw`flex flex-row items-center gap-4`}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText type="title">Settings</ThemedText>
       </View>
     </SafeAreaView>
   

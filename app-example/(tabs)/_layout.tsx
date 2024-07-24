@@ -4,23 +4,15 @@ import React from 'react';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import Header from '@/components/layout/header';
-import { SafeAreaView } from 'react-native';
-
-import tw from 'twrnc'
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
   return (
-    
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarStyle: {
-          backgroundColor: Colors[colorScheme ?? 'light'].background,
-        },
       }}>
       <Tabs.Screen
         name="index"
@@ -32,16 +24,14 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="settings"
+        name="explore"
         options={{
-          title: 'Settings',
+          title: 'Explore',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
           ),
         }}
       />
-      
-      </Tabs>
-    
+    </Tabs>
   );
 }
