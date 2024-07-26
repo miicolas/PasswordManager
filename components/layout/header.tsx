@@ -9,6 +9,7 @@ export default function Header({ title }: { title: string }) {
         source={require("../../assets/images/logo.png")}
         style={tw`w-10 h-10`}
       />
+      <Text style={tw`text-2xl font-bold`}>{title}</Text>
       <Pressable style={tw`bg-blue-500 p-2 rounded-full items-center justify-center`}>
         <Plus color="white" size={20} />
       </Pressable>

@@ -40,7 +40,12 @@ export default function TabLayout() {
           ),
         }}
       />
-      
+      <Tabs.Screen
+        name="itemsDetails/[slug]/index"
+        options={{
+          href: null,
+        }}
+      />
       </Tabs>
     
   );
